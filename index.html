@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ady映画官网-高品质影视动画创作与视觉艺术平台</title>
+    <meta name="description" content="ady映画官网是一个专注于影视动画、视觉特效与数字内容创作的官方网站。我们提供动画制作、电影特效、视觉设计等服务，探索影像艺术的无限可能。">
+    <meta name="keywords" content="ady映画官网,ady映画,影视动画,动画制作,视觉特效,数字内容,映画,动画工作室">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: #0d0d10;
+            color: #e8e6e3;
+            line-height: 1.7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        .site-header {
+            background: #141419;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(20,20,25,0.92);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #f5c542;
+            text-shadow: 0 0 20px rgba(245,197,66,0.3);
+        }
+        .logo span {
+            color: #e8e6e3;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .main-nav a {
+            color: #b0b0b8;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+        }
+        .main-nav a:hover {
+            color: #f5c542;
+            border-bottom-color: #f5c542;
+        }
+        .nav-cta {
+            background: #f5c542;
+            color: #0d0d10 !important;
+            padding: 8px 18px !important;
+            border-radius: 30px;
+            font-weight: 600;
+            border: none !important;
+        }
+        .nav-cta:hover {
+            background: #ffd75e;
+        }
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0d0d10 0%, #1a1a24 60%, #2a1f0e 100%);
+            padding: 70px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245,197,66,0.06) 0%, transparent 70%);
+            top: -100px;
+            right: -100px;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .hero-content h1 {
+            font-size: 46px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .hero-content h1 .accent {
+            color: #f5c542;
+        }
+        .hero-content p {
+            font-size: 17px;
+            color: #b0b0b8;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .badge {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            backdrop-filter: blur(5px);
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: #f5c542;
+            color: #0d0d10;
+        }
+        .btn-primary:hover {
+            background: #ffd75e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245,197,66,0.3);
+        }
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #e8e6e3;
+        }
+        .btn-outline:hover {
+            border-color: #f5c542;
+            color: #f5c542;
+        }
+        .hero-visual {
+            position: relative;
+        }
+        .visual-card {
+            background: linear-gradient(145deg, #1e1e28, #15151c);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .visual-card h3 {
+            color: #f5c542;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .visual-list {
+            list-style: none;
+        }
+        .visual-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .visual-list li::before {
+            content: '◆';
+            color: #f5c542;
+            font-size: 10px;
+        }
+        .visual-list li:last-child {
+            border-bottom: none;
+        }
+        /* Sections */
+        .section {
+            padding: 70px 0;
+        }
+        .section-head {
+            margin-bottom: 45px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #f5c542;
+            border-radius: 2px;
+        }
+        .section-sub {
+            color: #888;
+            font-size: 15px;
+        }
+        /* Feature cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .feature-card {
+            background: #16161d;
+            border-radius: 18px;
+            padding: 32px 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245,197,66,0.3);
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(245,197,66,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .feature-card p {
+            color: #9a9aa5;
+            font-size: 15px;
+        }
+        /* Work showcase */
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .work-item {
+            border-radius: 14px;
+            overflow: hidden;
+            background: #1a1a22;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+            aspect-ratio: 3/4;
+            display: flex;
+            flex-direction: column;
+        }
+        .work-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        .work-thumb {
+            flex: 1;
+            background: linear-gradient(145deg, #2a2a35, #1c1c24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f5c542;
+            font-size: 40px;
+            font-weight: 300;
+        }
+        .work-info {
+            padding: 15px;
+        }
+        .work-info h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        .work-info p {
+            font-size: 13px;
+            color: #777;
+        }
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            counter-reset: step;
+        }
+        .step-item {
+            position: relative;
+            padding: 30px 20px;
+            background: #131318;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+        }
+        .step-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #f5c542;
+        }
+        .step-item p {
+            font-size: 14px;
+            color: #8a8a95;
+        }
+        .step-item::before {
+            counter-increment: step;
+            content: "0" counter(step);
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #f5c542;
+            color: #0d0d10;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        /* FAQ */
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #16161d;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            padding: 20px 30px;
+            border-left: 3px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        .faq-item:hover {
+            border-left-color: #f5c542;
+        }
+        .faq-item h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+        .faq-item p {
+            font-size: 15px;
+            color: #9a9aa5;
+        }
+        /* CTA section */
+        .cta-section {
+            background: linear-gradient(120deg, #1c1c26, #241f14);
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .cta-section h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            color: #b0b0b8;
+        }
+        /* Footer */
+        .site-footer {
+            background: #0a0a0e;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 50px 0 30px;
+            margin-top: 60px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand p {
+            color: #888;
+            font-size: 14px;
+            margin-top: 10px;
+            max-width: 250px;
+        }
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul a {
+            color: #888;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .footer-col ul a:hover {
+            color: #f5c542;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #666;
+        }
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .feature-grid,
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            .main-nav ul {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            .feature-grid,
+            .work-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .section-head {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">ady映画<span>官网</span></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#works">作品</a></li>
+                    <li><a href="#process">流程</a></li>
+                    <li><a href="#faq">问答</a></li>
+                    <li><a href="#contact" class="nav-cta">项目合作</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>影像创造 · <span class="accent">映画而生</span></h1>
+                    <p>ady映画官网专注于高品质影视动画与视觉创意制作。从概念设计到成片输出，为品牌、电影与数字内容提供一体化解决方案。</p>
+                    <div class="hero-badges">
+                        <span class="badge">🎬 动画制作</span>
+                        <span class="badge">✨ 视觉特效</span>
+                        <span class="badge">🎨 概念艺术</span>
+                        <span class="badge">🎥 影视后期</span>
+                    </div>
+                    <div class="btn-group">
+                        <a href="#works" class="btn btn-primary">浏览作品</a>
+                        <a href="#contact" class="btn btn-outline">联系我们</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <h3>🎞 近期动态</h3>
+                        <ul class="visual-list">
+                            <li>原创IP动画短片《星轨》进入后期阶段</li>
+                            <li>与国内影视公司达成视觉开发合作</li>
+                            <li>2025年概念艺术展作品征集中</li>
+                            <li>新一期动画创作工作坊开启报名</li>
+                            <li>品牌形象片《映·像》上线</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">关于ady映画</h2>
+                    <p class="section-sub">让每一帧都值得被铭记</p>
+                </div>
+                <p style="color:#9a9aa5; max-width: 800px; margin-bottom: 40px; font-size: 16px;">
+                    ady映画是一支由动画师、设计师、技术美术和导演组成的创作团队。我们相信影像拥有触动人心的力量，致力于以专业的制作流程和艺术化的表达方式，为观众与品牌创造具有感染力的视觉作品。无论是商业广告、影视剧集还是独立动画，我们从概念出发，将创意落地为生动的画面。
+                </p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>概念设计</h3>
+                        <p>从世界观构建到角色设计，打造独特的视觉基础，让每一个项目在起点就具备鲜明的美学风格。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <h3>动态影像</h3>
+                        <p>涵盖二维与三维动画、动态图形、影视特效合成，用流畅的镜头语言讲述引人入胜的故事。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖥</div>
+                        <h3>后期制作</h3>
+                        <p>专业的剪辑、调色与音效设计，完善影片的每一个细节，确保成片质量符合行业标准。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section class="section" id="works" style="background: #111116;">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">精选项目</h2>
+                    <p class="section-sub">近年部分代表作品</p>
+                </div>
+                <div class="work-grid">
+                    <div class="work-item">
+                        <div class="work-thumb">✦</div>
+                        <div class="work-info">
+                            <h4>《星轨》动画短片</h4>
+                            <p>科幻 · 独立动画</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-thumb">☀</div>
+                        <div class="work-info">
+                            <h4>品牌形象片《光》</h4>
+                            <p>商业 · 动态影像</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-thumb">◈</div>
+                        <div class="work-info">
+                            <h4>游戏CG《降临》</h4>
+                            <p>游戏 · 三维动画</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-thumb">♾</div>
+                        <div class="work-info">
+                            <h4>艺术实验《流动》</h4>
+                            <p>视觉 · 概念艺术</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section" id="process">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">制作流程</h2>
+                    <p class="section-sub">清晰高效的创作路径</p>
+                </div>
+                <div class="process-steps">
+                    <div class="step-item">
+                        <h3>需求沟通</h3>
+                        <p>了解项目目标、风格偏好与预算范围，建立共识。</p>
+                    </div>
+                    <div class="step-item">
+                        <h3>概念与剧本</h3>
+                        <p>产出创意方案、概念图与剧本，确认视觉方向。</p>
+                    </div>
+                    <div class="step-item">
+                        <h3>制作执行</h3>
+                        <p>进行建模、动画、特效与渲染等核心环节制作。</p>
+                    </div>
+                    <div class="step-item">
+                        <h3>后期与交付</h3>
+                        <p>合成调色、音效打磨，按要求输出多版本成片。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" id="faq" style="background: #111116;">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">常见问题</h2>
+                    <p class="section-sub">关于合作与制作</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>如何开始一个项目合作？</h3>
+                        <p>通过官网的“项目合作”入口提交需求，我们会安排初步沟通，了解您的期望并给出建议与排期。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>一般制作周期是多久？</h3>
+                        <p>根据项目类型和复杂程度有所不同。通常一部3-5分钟的动画短片周期在4-8周左右，具体会在方案确认后给出时间表。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>是否提供视觉风格预演？</h3>
+                        <p>在概念设计阶段，我们会提供风格参考板或关键帧测试，帮助双方在正式制作前明确视觉方向。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>是否支持版权买断？</h3>
+                        <p>支持。我们理解不同项目对版权的需求，可以在合同中约定版权归属及使用范围，灵活协商。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>可以参观工作室吗？</h3>
+                        <p>我们欢迎预约来访。请提前三天通过邮箱或电话联系，以便安排接待。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="cta-section">
+                    <h2>🎬 让我们一起创作动人的影像</h2>
+                    <p>无论是一个大胆的动画设想，还是品牌影像升级计划，ady映画都愿意成为您的创作伙伴。</p>
+                    <div class="btn-group" style="justify-content: center;">
+                        <a href="mailto:hello@adyfilm.example" class="btn btn-primary">发送邮件</a>
+                        <a href="tel:+8613800000000" class="btn btn-outline">电话咨询</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="font-size:22px;">ady映画<span>官网</span></div>
+                    <p>专注于影视动画与视觉创意的艺术工作室。以匠心打磨每一帧画面，让故事拥有独特的温度。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#works">作品</a></li>
+                        <li><a href="#process">流程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务</h4>
+                    <ul>
+                        <li><a href="#">动画制作</a></li>
+                        <li><a href="#">视觉特效</a></li>
+                        <li><a href="#">概念设计</a></li>
+                        <li><a href="#">后期调色</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱：hello@adyfilm.example</li>
+                        <li>电话：+86 138 0000 0000</li>
+                        <li>地址：上海市静安区创意产业园</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 ady映画官网 保留所有权利</p>
+                <p>以影像连接世界 · 让创意自由生长</p>
+            </div>
+        </div>
+    </footer>
+</body>
+                  </html>
