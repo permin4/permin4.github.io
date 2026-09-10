@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开办艺术培训班-创业筹备指南与运营实操手册</title>
+    <meta name="description" content="为准备开办艺术培训班的教育创业者提供从市场调研、资质办理、课程设计、师资建设到招生运营的全流程指导，涵盖美术、音乐、舞蹈等常见类别。">
+    <meta name="keywords" content="开办艺术培训班,艺术培训创业,美术培训班,音乐培训班,舞蹈培训,办学资质,招生技巧">
+    <link rel="stylesheet" href="data:text/css,/* 内嵌样式在下方style标签中 */">
+    <style>
+        /* ===== 全局重置与基础 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: #f8f6f3;
+            color: #2d2a26;
+            line-height: 1.7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== 页眉与导航 ===== */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.45rem;
+            color: #1e2a3a;
+            letter-spacing: 0.5px;
+        }
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #f7b733, #fc4a1a);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.3rem;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+        }
+        .main-nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #4a4f57;
+            padding: 8px 2px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .main-nav a:hover {
+            color: #d35400;
+            border-bottom-color: #d35400;
+        }
+        .nav-cta {
+            background: #d35400;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover {
+            background: #b84500;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 1.6rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #2d2a26;
+        }
+
+        /* ===== 首屏 Hero ===== */
+        .hero {
+            background: linear-gradient(120deg, #fdf8f2 0%, #fceee3 55%, #f9e0ce 100%);
+            padding: 70px 0 50px;
+            border-bottom: 1px solid #eee5db;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-copy h1 {
+            font-size: 2.7rem;
+            line-height: 1.2;
+            font-weight: 800;
+            color: #1f2a36;
+            margin-bottom: 20px;
+        }
+        .hero-copy h1 span {
+            color: #d35400;
+            position: relative;
+            white-space: nowrap;
+        }
+        .hero-desc {
+            font-size: 1.15rem;
+            color: #4a4f57;
+            margin-bottom: 28px;
+            max-width: 540px;
+        }
+        .hero-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 28px;
+            margin-bottom: 34px;
+        }
+        .hero-points li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        .hero-points li::before {
+            content: "✓";
+            color: #d35400;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #1e2a3a;
+            color: #fff;
+            padding: 13px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+            border: 2px solid #1e2a3a;
+        }
+        .btn-primary:hover {
+            background: #d35400;
+            border-color: #d35400;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #d35400;
+            color: #d35400;
+            padding: 13px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover {
+            background: #d35400;
+            color: #fff;
+        }
+        .hero-visual {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            padding: 20px;
+            border: 1px solid #f0e6dc;
+        }
+        .hero-visual-box {
+            background: #faf5f0;
+            border-radius: 14px;
+            padding: 24px;
+            border-left: 6px solid #d35400;
+        }
+        .hero-visual-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #1e2a3a;
+        }
+        .mini-plan {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .mini-step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #fff;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .step-num {
+            background: #d35400;
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .step-text {
+            font-weight: 500;
+        }
+        .step-detail {
+            font-size: 0.85rem;
+            color: #777;
+            margin-left: auto;
+        }
+
+        /* ===== 信息架构区块通用 ===== */
+        .section {
+            padding: 70px 0;
+        }
+        .section-alt {
+            background: #ffffff;
+        }
+        .section-tag {
+            display: inline-block;
+            background: #fceae0;
+            color: #d35400;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 30px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e2a3a;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        .section-sub {
+            color: #5f5a52;
+            max-width: 700px;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+        .center {
+            text-align: center;
+        }
+        .center .section-sub {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== 创业路径时间线 ===== */
+        .timeline-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+        .timeline-card {
+            flex: 1 1 200px;
+            min-width: 200px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 22px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            border-top: 4px solid #d35400;
+            transition: transform 0.2s;
+        }
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        .timeline-card .phase {
+            font-size: 0.9rem;
+            color: #d35400;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .timeline-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1e2a3a;
+        }
+        .timeline-card p {
+            font-size: 0.92rem;
+            color: #5b5b5b;
+            line-height: 1.6;
+        }
+
+        /* ===== 核心筹备要点 (卡片) ===== */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .feature-card {
+            background: #fdfcfb;
+            border-radius: 14px;
+            padding: 30px 25px;
+            border: 1px solid #ebe7e0;
+            transition: all 0.2s;
+        }
+        .feature-card:hover {
+            border-color: #d35400;
+            box-shadow: 0 8px 20px rgba(211,84,0,0.08);
+        }
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1e2a3a;
+        }
+        .feature-card p {
+            font-size: 0.92rem;
+            color: #5f5a52;
+        }
+
+        /* ===== 课程设置 / 艺术类别 ===== */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .category-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 18px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #f0ebe5;
+            transition: box-shadow 0.2s;
+        }
+        .category-card:hover {
+            box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+        }
+        .category-emoji {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+        }
+        .category-card h3 {
+            font-size: 1.15rem;
+            color: #1e2a3a;
+        }
+        .category-card p {
+            color: #777;
+            font-size: 0.88rem;
+            margin-top: 6px;
+        }
+
+        /* ===== 经营要点 两栏 ===== */
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .check-list {
+            margin-top: 10px;
+        }
+        .check-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #e2dcd3;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .check-list li::before {
+            content: "◆";
+            color: #d35400;
+            font-size: 1rem;
+            margin-top: 3px;
+        }
+        .check-list li strong {
+            display: block;
+            color: #1e2a3a;
+            font-size: 1.05rem;
+        }
+        .check-list li span {
+            font-size: 0.92rem;
+            color: #5f5a52;
+        }
+        .info-box {
+            background: #fceae0;
+            border-radius: 16px;
+            padding: 28px;
+            border-left: 5px solid #d35400;
+        }
+        .info-box h3 {
+            font-size: 1.2rem;
+            color: #1e2a3a;
+            margin-bottom: 12px;
+        }
+        .info-box p {
+            font-size: 0.95rem;
+            color: #4a4f57;
+        }
+
+        /* ===== 数据与提示 ===== */
+        .stats-band {
+            background: #1e2a3a;
+            color: #fff;
+            padding: 40px 0;
+            margin: 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        .stat-item .num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f7b733;
+        }
+        .stat-item .label {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-top: 6px;
+        }
+
+        /* ===== 招生运营步骤 ===== */
+        .operation-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            counter-reset: op-step;
+        }
+        .op-card {
+            background: #fdfcfb;
+            border-radius: 16px;
+            padding: 28px 24px;
+            border: 1px solid #e9e2da;
+            position: relative;
+        }
+        .op-card::before {
+            counter-increment: op-step;
+            content: "0" counter(op-step);
+            position: absolute;
+            top: -8px;
+            right: 20px;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: rgba(211,84,0,0.12);
+            line-height: 1;
+        }
+        .op-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: #1e2a3a;
+        }
+        .op-card p {
+            font-size: 0.92rem;
+            color: #5f5a52;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            padding: 20px 24px;
+            border: 1px solid #efe8e0;
+        }
+        .faq-item summary {
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #1e2a3a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary::after {
+            content: "+";
+            font-size: 1.6rem;
+            color: #d35400;
+            font-weight: 400;
+            margin-left: 16px;
+        }
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+        .faq-answer {
+            margin-top: 14px;
+            color: #5f5a52;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: #1e2a3a;
+            color: #d0d4dc;
+            padding: 50px 0 20px;
+            margin-top: 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .footer-brand .brand {
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: #aab3c0;
+            max-width: 280px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .footer-col ul li a:hover {
+            color: #f7b733;
+        }
+        .footer-bottom {
+            border-top: 1px solid #384252;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #8e99a8;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .hero-copy h1 {
+                font-size: 2.2rem;
+            }
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .split-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .operation-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: #fff;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+                padding: 20px;
+                border-radius: 0 0 12px 12px;
+            }
+            .main-nav.open {
+                display: block;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-nav a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #f0ebe5;
+            }
+            .nav-cta {
+                display: inline-block;
+                margin-top: 10px;
+                text-align: center;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .hero {
+                padding: 40px 0 30px;
+            }
+            .hero-copy h1 {
+                font-size: 1.8rem;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .feature-grid,
+            .category-grid,
+            .operation-steps {
+                grid-template-columns: 1fr;
+            }
+            .timeline-wrapper {
+                flex-direction: column;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .hero-actions .btn-primary,
+            .hero-actions .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="brand">
+            <span class="brand-icon">✎</span>
+            <span>艺培创业手册</span>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="打开导航">☰</button>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="#start">筹备路径</a></li>
+                <li><a href="#core">核心要点</a></li>
+                <li><a href="#courses">课程方向</a></li>
+                <li><a href="#operation">招生运营</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#contact" class="nav-cta">获取指南</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h1>开办艺术培训班<br><span>从0到1的创业实操指南</span></h1>
+                <p class="hero-desc">无论你想开设美术、音乐、舞蹈还是书法培训班，这里系统梳理了市场调研、资质办理、课程体系、场地装修、师资招募和招生推广的完整方法论，助你少走弯路。</p>
+                <ul class="hero-points">
+                    <li>政策合规与办证流程</li>
+                    <li>课程定价与盈利模型</li>
+                    <li>线上线下招生技巧</li>
+                    <li>学员留存与口碑运营</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="#core" class="btn-primary">开始筹备</a>
+                    <a href="#faq" class="btn-outline">常见疑问</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-box">
+                    <h3>📋 开办流程速览</h3>
+                    <div class="mini-plan">
+                        <div class="mini-step"><span class="step-num">1</span><span class="step-text">市场定位</span><span class="step-detail">1-2个月</span></div>
+                        <div class="mini-step"><span class="step-num">2</span><span class="step-text">资质办理</span><span class="step-detail">并行启动</span></div>
+                        <div class="mini-step"><span class="step-num">3</span><span class="step-text">选址装修</span><span class="step-detail">2-3个月</span></div>
+                        <div class="mini-step"><span class="step-num">4</span><span class="step-text">团队组建</span><span class="step-detail">提前1-2月</span></div>
+                        <div class="mini-step"><span class="step-num">5</span><span class="step-text">招生预热</span><span class="step-detail">开业前1月</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 创业路径时间线 -->
+    <section class="section" id="start">
+        <div class="container">
+            <div class="center">
+                <span class="section-tag">创业路线图</span>
+                <h2 class="section-title">开办艺术培训班的五个关键阶段</h2>
+                <p class="section-sub">从想法到落地，每一步都有章可循。以下路径基于大量真实创业者经验总结，帮助你排布时间与资源。</p>
+            </div>
+            <div class="timeline-wrapper">
+                <div class="timeline-card">
+                    <div class="phase">阶段一</div>
+                    <h3>市场与定位</h3>
+                    <p>分析周边3-5公里内竞品分布、人口结构与消费能力，确定主攻科目（美术/音乐/舞蹈等）和学员年龄段，进行差异化定位。</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="phase">阶段二</div>
+                    <h3>证照与合规</h3>
+                    <p>办理营业执照，向教育部门申请办学许可证或备案，同时完成消防验收、场地安全检测，了解当地“双减”政策对非学科类培训的要求。</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="phase">阶段三</div>
+                    <h3>选址与装修</h3>
+                    <p>优先选择学校周边、大型社区或商场教育层，面积建议150㎡以上。装修注意隔音（音乐）、防滑（舞蹈）以及采光通风（美术）。</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="phase">阶段四</div>
+                    <h3>师资与课程</h3>
+                    <p>招募全职+兼职教师，建立标准化课程大纲和教学效果评估体系。设计体验课转化流程，确保教学质量可复制。</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="phase">阶段五</div>
+                    <h3>开业与招生活动</h3>
+                    <p>通过地推、社群裂变、异业合作等方式开展低价体验课包，营造开业氛围，收集家长反馈并优化服务流程。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心筹备要点 -->
+    <section class="section section-alt" id="core">
+        <div class="container">
+            <div class="center">
+                <span class="section-tag">核心能力</span>
+                <h2 class="section-title">决定培训班存亡的五大核心要点</h2>
+                <p class="section-sub">这些要点往往被新手忽略，却直接影响机构的持续经营与口碑积累。</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>精准定位</h3>
+                    <p>是走中高端素质教育路线，还是普惠型兴趣培养？明确目标客群的消费水平和教育理念，避免定位模糊导致课程与价格错配。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📜</div>
+                    <h3>合规资质</h3>
+                    <p>艺术培训属于非学科类，但不少地区仍要求办学许可证或审核登记。务必提前咨询当地教育局，避免后期被责令停办。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👩‍🏫</div>
+                    <h3>师资力量</h3>
+                    <p>好老师是核心资产。除了专业能力，还要考察教学耐心和儿童心理学基础。建立老师培训与淘汰机制，保障教学稳定。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>财务模型</h3>
+                    <p>测算房租、人力、耗材等固定成本，设定满班率临界点。建议单店模型下，满班率需达到60%左右才能实现盈亏平衡。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📢</div>
+                    <h3>招生能力</h3>
+                    <p>搭建“体验课-正价课-续费”的转化链路。重视老生转介绍，设计推荐有礼机制，降低获客成本。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>运营管理</h3>
+                    <p>使用教务管理系统进行排课、考勤、消课统计。定期举办教学成果展，增强学员归属感，提升续费率。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程方向分类 -->
+    <section class="section" id="courses">
+        <div class="container">
+            <div class="center">
+                <span class="section-tag">科目选择</span>
+                <h2 class="section-title">主流艺术培训方向与特点</h2>
+                <p class="section-sub">不同科目的市场需求、成本结构和利润空间差异明显，选择适合自己资源禀赋的方向。</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-emoji">🎨</div>
+                    <h3>美术</h3>
+                    <p>需求量大，材料成本低，适合多年龄段开班，但同质化竞争较严重。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-emoji">🎹</div>
+                    <h3>音乐</h3>
+                    <p>钢琴、吉他等客单价高，需乐器投入，一对一或小组课模式为主。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-emoji">🩰</div>
+                    <h3>舞蹈</h3>
+                    <p>中国舞、街舞、拉丁等热度高，需大型教室和地胶，可组织考级和展演。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-emoji">✍️</div>
+                    <h3>书法/国画</h3>
+                    <p>传统文化趋势利好，成本较低，适合成人及少儿，但招生有一定地域偏好。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据带（非虚构，仅作常规经验提示） -->
+    <div class="stats-band">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="num">3-5km</div>
+                    <div class="label">有效辐射半径</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">150㎡</div>
+                    <div class="label">建议起始面积</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">60%</div>
+                    <div class="label">盈亏平衡满班率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">1:8</div>
+                    <div class="label">常见师生比</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 运营与招生 -->
+    <section class="section section-alt" id="operation">
+        <div class="container">
+            <div class="center">
+                <span class="section-tag">运营实战</span>
+                <h2 class="section-title">招生与运营的可持续打法</h2>
+                <p class="section-sub">开业只是起点，持续获客和学员留存才是长期盈利的关键。</p>
+            </div>
+            <div class="operation-steps">
+                <div class="op-card">
+                    <h3>体验课设计</h3>
+                    <p>打造高价值感的免费或低价体验课（如1元2节），课后进行专业测评并输出学员成长报告，提高转化率。</p>
+                </div>
+                <div class="op-card">
+                    <h3>异业合作</h3>
+                    <p>与周边绘本馆、儿童摄影、文具店合作，互相导流。也可进入幼儿园、小学开展公益艺术讲座，建立品牌认知。</p>
+                </div>
+                <div class="op-card">
+                    <h3>社群运营</h3>
+                    <p>建立家长微信群，定期分享学员作品、艺术教育知识，组织打卡活动。让家长成为口碑传播者。</p>
+                </div>
+                <div class="op-card">
+                    <h3>成果展示</h3>
+                    <p>每学期举办画展、汇演或考级，邀请家长见证孩子进步。这是最有力的续费说服工具。</p>
+                </div>
+                <div class="op-card">
+                    <h3>教务数字化</h3>
+                    <p>使用校宝、小麦助教等工具管理剩余课时、自动提醒续费，减少人工遗漏，提升家长体验。</p>
+                </div>
+                <div class="op-card">
+                    <h3>口碑裂变</h3>
+                    <p>设计“老带新”双向奖励，例如老生赠课2节，新生减100元。口碑信任远胜广告投放。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 经营要点与提醒 -->
+    <section class="section">
+        <div class="container">
+            <div class="split-grid">
+                <div>
+                    <span class="section-tag">避坑指南</span>
+                    <h2 class="section-title">新手开办易踩的六个坑</h2>
+                    <ul class="check-list">
+                        <li>
+                            <div><strong>盲目追求豪华装修</strong><span>初期资金应更多预留为运营周转金，装修实用环保即可，后期可逐步升级。</span></div>
+                        </li>
+                        <li>
+                            <div><strong>忽略消防与安全</strong><span>艺术培训学员多为未成年人，消防通道、灭火器、监控设备缺一不可，这是办证硬指标。</span></div>
+                        </li>
+                        <li>
+                            <div><strong>课程体系不完善</strong><span>没有标准教案和进阶路径，老师离职就带走了学员。应建立机构自己的教学大纲。</span></div>
+                        </li>
+                        <li>
+                            <div><strong>过度依赖低价引流</strong><span>长期9.9元课会拉低品牌调性，且吸引非精准客户。体验课应限量且配合测评关单。</span></div>
+                        </li>
+                        <li>
+                            <div><strong>教师薪酬设计不合理</strong><span>纯底薪或纯课时费都容易导致教学质量波动，建议“底薪+课时费+续班奖金”结构。</span></div>
+                        </li>
+                        <li>
+                            <div><strong>忽视合同与退费条款</strong><span>在报名协议中明确退费规则、请假制度、课时有效期，避免日后纠纷。</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="info-box">
+                        <h3>📌 资金预算参考</h3>
+                        <p>以二三线城市100-200㎡的社区店为例，首期投入通常包括：6个月房租（约6-15万）、基础装修（5-10万）、教学设备与乐器（3-8万）、人员工资储备（3-6万）、营销推广费（1-3万）。整体预备15-40万元较为稳妥，具体视城市与定位浮动。</p>
+                    </div>
+                    <div class="info-box" style="margin-top: 20px; border-left-color: #1e2a3a; background: #f1f5f9;">
+                        <h3>📋 证照办理材料清单</h3>
+                        <p>① 房屋租赁合同及产权证明；② 举办者身份证明；③ 消防验收合格意见；④ 办学场所平面图；⑤ 教学计划与课程大纲；⑥ 教师资质证明复印件。建议先向区教育局咨询最新细则。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="center">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">开办艺术培训班常见问题</h2>
+                <p class="section-sub">针对搜索者最关心的几个实际问题给出参考思路。</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary>没有教学经验，可以开办艺术培训班吗？</summary>
+                    <div class="faq-answer">可以。但建议至少有一名懂教学的核心合伙人或全职教学主管。作为投资者，你可以负责市场与运营，但教学品控必须交给有经验的人。自己也可以通过参加师资培训快速入门。</div>
+                </details>
+                <details class="faq-item">
+                    <summary>办学许可证必须办理吗？需要什么条件？</summary>
+                    <div class="faq-answer">目前多数地区将艺术类培训归为非学科类，执行“先证后照”或“备案制”。具体要求因城市而异，通常需满足场地面积（一般不少于100㎡）、消防合格、教师持证等条件。务必联系当地教育局或文旅局确认最新政策。</div>
+                </details>
+                <details class="faq-item">
+                    <summary>如何确定培训班的收费价格？</summary>
+                    <div class="faq-answer">参考周边竞品价格，结合自身成本（房租、人力、耗材）和定位。一般可采用“低价引流课+正价系统课”组合，正价课按课时包收费，单价从80-300元/节不等，需保证毛利率在50%以上。</div>
+                </details>
+                <details class="faq-item">
+                    <summary>怎样找到合适的老师？</summary>
+                    <div class="faq-answer">招聘渠道包括师范院校就业网、BOSS直聘、本地教师群。面试时要求试讲15分钟，考察课堂掌控力。同时可以招募音乐院校在校生作为兼职，但核心科目必须配备全职教师。</div>
+                </details>
+                <details class="faq-item">
+                    <summary>开业初期招不到学生怎么办？</summary>
+                    <div class="faq-answer">前三个月是积累期，建议多管齐下：免费亲子体验活动、与社区合作公益课、在家长群进行知识分享。同时优化体验课转化话术，可设置两人同行优惠。保持耐心，口碑需要时间发酵。</div>
+                </details>
+                <details class="faq-item">
+                    <summary>艺术培训班的利润率大概是多少？</summary>
+                    <div class="faq-answer">成熟运营的机构净利润率通常在15%-30%之间。初期由于满班率低，可能前3-6个月处于微利或亏损状态。关键在于提高满班率和续费率，降低获客成本。</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行动呼吁 -->
+    <section class="section" id="contact">
+        <div class="container center">
+            <h2 class="section-title">准备好迈出第一步了吗？</h2>
+            <p class="section-sub" style="margin-left: auto; margin-right: auto;">建议你先完成一份简单的商业计划书，明确科目、选址、预算。也可以收藏本页作为行动清单。</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+                <a href="#start" class="btn-primary">回顾筹备路线</a>
+                <a href="#core" class="btn-outline">查看核心要点</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand"><span class="brand-icon">✎</span> 艺培创业手册</div>
+                <p>专注为艺术培训创业者提供务实、可落地的经营参考。我们相信，热爱与商业可以并行。</p>
+            </div>
+            <div class="footer-col">
+                <h4>创业准备</h4>
+                <ul>
+                    <li><a href="#start">市场调研</a></li>
+                    <li><a href="#core">资质办理</a></li>
+                    <li><a href="#courses">科目选择</a></li>
+                    <li><a href="#operation">招生方案</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源中心</h4>
+                <ul>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#core">财务模型</a></li>
+                    <li><a href="#operation">教师管理</a></li>
+                    <li><a href="#contact">政策参考</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">项目介绍</a></li>
+                    <li><a href="#">内容声明</a></li>
+                    <li><a href="#">投稿合作</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 艺培创业手册 - 本页内容仅供创业参考，不构成投资建议。具体政策请以当地主管部门为准。</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 移动端导航切换
+    const toggleBtn = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    toggleBtn.addEventListener('click', function() {
+        mainNav.classList.toggle('open');
+    });
+    // 点击导航链接后自动关闭移动端菜单
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            mainNav.classList.remove('open');
+        });
+    });
+</script>
+</body>
+  </html>
